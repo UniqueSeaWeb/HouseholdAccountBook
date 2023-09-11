@@ -51,10 +51,10 @@
             <h2>画面サイズ（バーなし）</h2>
             <ul>
                 <li>
-                    <p>横幅：<span id="screenWidth"></span></p>
+                    <p>横幅：<span id="screenWidth"></span>px</p>
                 </li>
                 <li>
-                    <p>縦幅：<span id="screenHeight"></span></p>
+                    <p>縦幅：<span id="screenHeight"></span>px</p>
                 </li>
             </ul>
         </section>
@@ -62,10 +62,10 @@
             <h2>画面サイズ（バーあり）</h2>
             <ul>
                 <li>
-                    <p>横幅：<span id="screenWidth2"></span></p>
+                    <p>横幅：<span id="screenWidth2"></span>px</p>
                 </li>
                 <li>
-                    <p>縦幅：<span id="screenHeight2"></span></p>
+                    <p>縦幅：<span id="screenHeight2"></span>px</p>
                 </li>
             </ul>
         </section>
@@ -76,7 +76,7 @@
     </footer>
 
     <script>
-        window.addEventListener('load', function () {
+        function getScreenSize() {
             const screenWidth = document.documentElement.clientWidth;
             const screenHeight = document.documentElement.clientHeight;
             const screenWidth2 = document.documentElement.offsetWidth;
@@ -89,7 +89,10 @@
             screenHeightElem.innerText = screenHeight;
             screenWidth2Elem.innerText = screenWidth2;
             screenHeight2Elem.innerText = screenHeight2;
-        });
+        }
+        
+        window.addEventListener('load', getScreenSize);
+        window.addEventListener('resize', getScreenSize);
     </script>
 </body>
 
