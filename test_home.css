@@ -1,0 +1,147 @@
+/** テストホーム **/
+/* ボディ */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-image: url('../image/sunset_beach02.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.hh_typo_header {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* メイン */
+main {
+    flex-grow: 1;
+    padding: 40px 0;
+}
+
+/* 入力セクション */
+.hh_inputSec {
+    padding: 0 20px;
+}
+
+.hh_typo_inputExp {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+/* 入力フォーム */
+.hh_inputFormWrapper {
+    padding-top: 24px;
+}
+
+.hh_inputForm {
+    padding: 16px;
+    border: 1px solid #D9D9D9;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hh_inputList>li:not(:first-child) {
+    padding-top: 16px;
+}
+
+.hh_typo_inputLabel {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #2E2E2E;
+}
+
+.hh_inputItem {
+    width: 100%;
+    margin-top: 8px;
+    padding: 15px;
+    border: 1px solid #D9D9D9;
+    border-radius: 16px;
+    background-color: #FEFBDB;
+}
+
+.hh_dropdown>option {
+    background-color: #FFFFFF;
+}
+
+.hh_textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+}
+
+.hh_typo_inputItem {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2E2E2E;
+}
+
+.hh_typo_inputItem::placeholder {
+    color: #585858;
+}
+
+/* 確定ボタン */
+.hh_confirmBtnWrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.hh_confirmBtn {
+    width: 280px;
+    padding: 16px;
+    border-radius: 29px;
+    background-color: #02465D;
+}
+
+.hh_confirmBtn:disabled {
+    border: none;
+    background-color: #D9D9D9;
+}
+
+.hh_typo_confirmBtn {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hh_typo_confirmBtn:disabled {
+    color: #585858;
+}
+
+/* フッター */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.hh_typo_footer {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+}
