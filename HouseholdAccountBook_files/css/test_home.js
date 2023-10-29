@@ -1,6 +1,6 @@
 /** テストホーム **/
-// ローダーを表示
-showLoader();
+// ローダーを作成
+createLoader();
 
 // 画面読込完了時、ローダーを非表示
 window.addEventListener('load', hideLoader);
@@ -10,7 +10,7 @@ function formatDate(dt) {
     var y = dt.getFullYear();
     var m = ('00' + (dt.getMonth() + 1)).slice(-2);
     var d = ('00' + dt.getDate()).slice(-2);
-    return (y + '-' + m + '-' + d);
+    return (y + '/' + m + '/' + d);
 }
 
 // 支払日の初期値を設定する関数
@@ -22,8 +22,21 @@ function setInitialDay() {
 }
 window.addEventListener('DOMContentLoaded', setInitialDay);
 
+/* datepickerの使用 */
+$(function () {
+    $('#hh_inputDay').datepicker();
+});
+
 // 確定ボタン押下時の処理
 function clickConfirmBtn() {
+    // ローダーを表示
+    showLoader();
+
+    // 確定ボタンの要素を取得
+    const confirmBtn = document.getElementById('hh_confirmBtn');
+    // 確定ボタンを非活性化
+    confirmBtn.disabled = true;
+
     // 支払日の入力欄の要素を取得
     const dayInputElm = document.getElementById('hh_inputDay');
     // 支払金額の入力欄の要素を取得
@@ -50,20 +63,36 @@ function clickConfirmBtn() {
     // 備考を取得
     paymentNote = noteInputElm.value;
 
+    // 送信用URLの定義
+    const postUrl = 'https://script.google.com/macros/s/AKfycbwYvz7mfR70woGg4yUnox8y4NnHTF3ZfLhLKShpWqyUVxBB3XCsoc3BqesqlW-KH7Bt/exec';
+
     // 送信用データの定義
-    sendDate = {
-        paymentDay: paymentDay,
-        paymentAmount: paymentAmount,
-        paymentContent: paymentContent,
-        paymentCategory: paymentCategory,
-        paymentMethod: paymentMethod,
-        paymentNote: paymentNote
+    postData = {
+        'Day': paymentDay,
+        'Amount': paymentAmount,
+        'Content': paymentContent,
+        'Category': paymentCategory,
+        'Method': paymentMethod,
+        'Note': paymentNote
     }
 
-    // 送信用URLの定義
-    const postUrl = '';
+    // 送信パラメータ
+    let postParam = {
+        "method": "POST",
+        "mode": "no-cors",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "body": JSON.stringify(postData)
+    };
 
-
+    // データの送信
+    fetch(postUrl, postParam).then(function () {
+        // ローダーを非表示
+        hideLoader();
+        // 確定ボタンを活性化
+        confirmBtn.disabled = false;
+    }).catch(function (error) {
+        window.alert('通信エラーが発生しました。\n\n' + error);
+    });
 }
 // 確定ボタンの要素を取得
 const confirmBtn = document.getElementById('hh_confirmBtn');
