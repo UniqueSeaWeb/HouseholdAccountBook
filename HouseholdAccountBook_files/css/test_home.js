@@ -27,6 +27,14 @@ $(function () {
     $('#hh_inputDay').datepicker();
 });
 
+// 入力完了時の自動フォーカス
+
+
+
+
+
+
+
 // 確定ボタン押下時の処理
 function clickConfirmBtn() {
     // ローダーを表示
