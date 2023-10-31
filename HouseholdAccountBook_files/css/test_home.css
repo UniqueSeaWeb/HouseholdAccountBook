@@ -105,6 +105,14 @@ main {
     color: #585858;
 }
 
+.hh_dropdown:has(option:first-child:checked) {
+    color: #585858;
+}
+
+.hh_dropdown>option:first-child {
+    color: #585858;
+}
+
 /* 確定ボタン */
 .hh_confirmBtnWrapper {
     display: flex;
