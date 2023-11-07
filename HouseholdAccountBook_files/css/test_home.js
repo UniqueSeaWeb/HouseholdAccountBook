@@ -64,7 +64,6 @@ window.addEventListener('DOMContentLoaded', function () {
                     if (categoryInputElm.value.trim().length == 0) {
                         // 支払分類が空またはスペースのみの場合
                         // 支払分類の入力欄へフォーカス
-                        categoryInputElm.focus();
                         categoryInputElm.open = true;
                     } else {
                         // 支払分類が入力済の場合
@@ -73,7 +72,6 @@ window.addEventListener('DOMContentLoaded', function () {
                         if (methodInputElm.value.trim().length == 0) {
                             // 支払方法が空またはスペースのみの場合
                             // 支払方法の入力欄へフォーカス
-                            methodInputElm.focus();
                             methodInputElm.open = true;
                         } else {
                             // 支払方法が入力済の場合
@@ -113,7 +111,6 @@ window.addEventListener('DOMContentLoaded', function () {
                     if (categoryInputElm.value.trim().length == 0) {
                         // 支払分類が空またはスペースのみの場合
                         // 支払分類の入力欄へフォーカス
-                        categoryInputElm.focus();
                         categoryInputElm.open = true;
                     } else {
                         // 支払分類が入力済の場合
@@ -122,7 +119,6 @@ window.addEventListener('DOMContentLoaded', function () {
                         if (methodInputElm.value.trim().length == 0) {
                             // 支払方法が空またはスペースのみの場合
                             // 支払方法の入力欄へフォーカス
-                            methodInputElm.focus();
                             methodInputElm.open = true;
                         } else {
                             // 支払方法が入力済の場合
@@ -165,7 +161,6 @@ window.addEventListener('DOMContentLoaded', function () {
                     if (methodInputElm.value.trim().length == 0) {
                         // 支払方法が空またはスペースのみの場合
                         // 支払方法の入力欄へフォーカス
-                        methodInputElm.focus();
                         methodInputElm.open = true;
                     } else {
                         // 支払方法が入力済の場合
@@ -207,7 +202,6 @@ window.addEventListener('DOMContentLoaded', function () {
                     if (categoryInputElm.value.trim().length == 0) {
                         // 支払分類が空またはスペースのみの場合
                         // 支払分類の入力欄へフォーカス
-                        categoryInputElm.focus();
                         categoryInputElm.open = true;
                     } else {
                         // 支払分類が入力済の場合
@@ -245,7 +239,6 @@ window.addEventListener('DOMContentLoaded', function () {
                 if (categoryInputElm.value.trim().length == 0) {
                     // 支払分類が空またはスペースのみの場合
                     // 支払分類の入力欄へフォーカス
-                    categoryInputElm.focus();
                     categoryInputElm.open = true;
                 } else {
                     // 支払分類が入力済の場合
@@ -254,7 +247,6 @@ window.addEventListener('DOMContentLoaded', function () {
                     if (methodInputElm.value.trim().length == 0) {
                         // 支払方法が空またはスペースのみの場合
                         // 支払方法の入力欄へフォーカス
-                        methodInputElm.focus();
                         methodInputElm.open = true;
                     } else {
                         // 支払方法が入力済の場合
