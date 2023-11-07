@@ -10,7 +10,7 @@ function formatDate(dt) {
     var y = dt.getFullYear();
     var m = ('00' + (dt.getMonth() + 1)).slice(-2);
     var d = ('00' + dt.getDate()).slice(-2);
-    return (y + '/' + m + '/' + d);
+    return (y + '-' + m + '-' + d);
 }
 
 // 支払日の初期値を設定する関数
@@ -20,14 +20,13 @@ function setInitialDay() {
     // 初期値を今日に設定
     dayInputElm.value = formatDate(new Date());
 }
-window.addEventListener('DOMContentLoaded', setInitialDay);
 
 window.addEventListener('DOMContentLoaded', function () {
-    /* datepickerの使用 */
-    $(function () {
-        $('#hh_inputDay').datepicker();
-    });
+    // 支払日の初期値を設定
+    setInitialDay();
 
+    // 支配日の入力欄の要素を取得
+    const dayInputElm = document.getElementById('hh_inputDay');
     // 支払金額の入力欄の要素を取得
     const amountInputElm = document.getElementById('hh_inputAmount');
     // 支払内容の入力欄の要素を取得
@@ -38,6 +37,51 @@ window.addEventListener('DOMContentLoaded', function () {
     const methodInputElm = document.getElementById('hh_inputMethod');
     // 備考の入力欄の要素を取得
     const noteInputElm = document.getElementById('hh_inputNote');
+
+    // 支払日を選択時に次の入力欄か確定ボタンへ自動フォーカス
+    dayInputElm.addEventListener('change', function () {
+        // 支払金額の入力欄の要素を取得
+        const amountInputElm = document.getElementById('hh_inputAmount');
+        // 入力判定
+        if (amountInputElm.value.trim().length == 0) {
+            // 支払金額が空またはスペースのみの場合
+            // 支払金額の入力欄へフォーカス
+            amountInputElm.focus();
+        } else {
+            // 支払金額が入力済の場合
+            // 支払内容の入力欄の要素を取得
+            const contentInputElm = document.getElementById('hh_inputContent');
+            if (contentInputElm.value.trim().length == 0) {
+                // 支払内容が空またはスペースのみの場合
+                // 支払内容の入力欄へフォーカス
+                contentInputElm.focus();
+            } else {
+                // 支払内容が入力済の場合
+                // 支払分類の入力欄の要素を取得
+                const categoryInputElm = document.getElementById('hh_inputCategory');
+                if (categoryInputElm.value.trim().length == 0) {
+                    // 支払分類が空またはスペースのみの場合
+                    // 支払分類の入力欄へフォーカス
+                    categoryInputElm.open = true;
+                } else {
+                    // 支払分類が入力済の場合
+                    // 支払方法の入力欄の要素を取得
+                    const methodInputElm = document.getElementById('hh_inputMethod');
+                    if (methodInputElm.value.trim().length == 0) {
+                        // 支払方法が空またはスペースのみの場合
+                        // 支払方法の入力欄へフォーカス
+                        methodInputElm.open = true;
+                    } else {
+                        // 支払方法が入力済の場合
+                        // 確定ボタンの要素を取得
+                        const confirmBtn = document.getElementById('hh_confirmBtn');
+                        // 確定ボタンへフォーカス
+                        confirmBtn.focus();
+                    }
+                }
+            }
+        }
+    });
 
     // 支払金額でEnter押下時に次の入力欄か確定ボタンへ自動フォーカス
     amountInputElm.addEventListener('keypress', function (e) {

@@ -9,10 +9,6 @@
     <!-- 共通CSS -->
     <link rel="stylesheet" href="../HouseholdAccountBook_files/css/reset.css">
     <link rel="stylesheet" href="../HouseholdAccountBook_files/css/common.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <!-- 画面個別CSS -->
     <link rel="stylesheet" href="../HouseholdAccountBook_files/css/test_home.css">
 </head>
@@ -20,7 +16,7 @@
 <body>
     <!-- 背景置いてスクロール -->
     <div class="hh_scrollBody">
-        <!-- メイン -->
+        <!-- ヘッダー -->
         <header>
             <h1 class="hh_typo_header">家計簿アプリ</h1>
         </header>
@@ -33,7 +29,7 @@
                     <ul class="hh_inputList">
                         <li>
                             <p class="hh_typo_inputLabel">日付を選択してください</p>
-                            <input placeholder="入力する" autocomplete="off" readonly id="hh_inputDay"
+                            <input type="date" value="" placeholder="入力する" autocomplete="off" id="hh_inputDay"
                                 class="hh_inputItem hh_typo_inputItem">
                         </li>
                         <li>
@@ -98,12 +94,6 @@
         </footer>
     </div>
 
-    <!-- jQuery本体 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- jQuery UI -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <!-- 日本語化ファイル -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/i18n/jquery.ui.datepicker-ja.min.js"></script>
     <!-- 共通JavaScript -->
     <script src="../HouseholdAccountBook_files/css/common.js"></script>
     <!-- 個別JavaScript -->
