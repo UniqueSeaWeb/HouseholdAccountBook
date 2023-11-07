@@ -104,6 +104,10 @@ main {
     color: #2E2E2E;
 }
 
+.hh_typo_inputItem[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+}
+
 .hh_typo_inputItem::placeholder {
     color: #585858;
 }
