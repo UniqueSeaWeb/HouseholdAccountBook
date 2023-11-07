@@ -77,6 +77,8 @@ window.addEventListener('DOMContentLoaded', function () {
                             methodInputElm.open = true;
                         } else {
                             // 支払方法が入力済の場合
+                            // 確定ボタンの要素を取得
+                            const confirmBtn = document.getElementById('hh_confirmBtn');
                             // 確定ボタンへフォーカス
                             confirmBtn.focus();
                         }
@@ -124,6 +126,8 @@ window.addEventListener('DOMContentLoaded', function () {
                             methodInputElm.open = true;
                         } else {
                             // 支払方法が入力済の場合
+                            // 確定ボタンの要素を取得
+                            const confirmBtn = document.getElementById('hh_confirmBtn');
                             // 確定ボタンへフォーカス
                             confirmBtn.focus();
                         }
@@ -165,6 +169,8 @@ window.addEventListener('DOMContentLoaded', function () {
                         methodInputElm.open = true;
                     } else {
                         // 支払方法が入力済の場合
+                        // 確定ボタンの要素を取得
+                        const confirmBtn = document.getElementById('hh_confirmBtn');
                         // 確定ボタンへフォーカス
                         confirmBtn.focus();
                     }
@@ -205,7 +211,8 @@ window.addEventListener('DOMContentLoaded', function () {
                         categoryInputElm.open = true;
                     } else {
                         // 支払分類が入力済の場合
-                        // 支払方法が入力済の場合
+                        // 確定ボタンの要素を取得
+                        const confirmBtn = document.getElementById('hh_confirmBtn');
                         // 確定ボタンへフォーカス
                         confirmBtn.focus();
                     }
@@ -251,6 +258,8 @@ window.addEventListener('DOMContentLoaded', function () {
                         methodInputElm.open = true;
                     } else {
                         // 支払方法が入力済の場合
+                        // 確定ボタンの要素を取得
+                        const confirmBtn = document.getElementById('hh_confirmBtn');
                         // 確定ボタンへフォーカス
                         confirmBtn.focus();
                     }
