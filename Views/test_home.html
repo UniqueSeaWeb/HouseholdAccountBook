@@ -27,64 +27,65 @@
         <!-- メイン -->
         <main>
             <section class="hh_inputSec">
-                <p class="hh_typo_inputExp">支払内容を入力してください</p>
-                <div class="hh_inputFormWrapper">
-                    <div class="hh_inputForm">
-                        <ul class="hh_inputList">
-                            <li>
-                                <p class="hh_typo_inputLabel">日付を選択してください</p>
-                                <input placeholder="入力する" id="hh_inputDay" class="hh_inputItem hh_typo_inputItem">
-                            </li>
-                            <li>
-                                <p class="hh_typo_inputLabel">金額を入力してください</p>
-                                <input type="number" placeholder="入力する" id="hh_inputAmount"
-                                    class="hh_inputItem hh_typo_inputItem">
-                            </li>
-                            <li>
-                                <p class="hh_typo_inputLabel">内容を入力してください</p>
-                                <input type="text" placeholder="入力する" id="hh_inputContent"
-                                    class="hh_inputItem hh_typo_inputItem">
-                            </li>
-                            <li>
-                                <p class="hh_typo_inputLabel">分類を選択してください</p>
-                                <select id="hh_inputCategory" class="hh_inputItem hh_dropdown hh_typo_inputItem">
-                                    <option value="" selected>選択する</option>
-                                    <option value="食費">食費</option>
-                                    <option value="生活雑貨費">生活雑貨費</option>
-                                    <option value="服飾費">服飾費</option>
-                                    <option value="チャージ">チャージ</option>
-                                    <option value="交際費">交際費</option>
-                                    <option value="娯楽費">娯楽費</option>
-                                    <option value="交通費">交通費</option>
-                                    <option value="公共料金">公共料金</option>
-                                    <option value="引落し">引落し</option>
-                                    <option value="給与">給与</option>
-                                    <option value="その他">その他</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="hh_typo_inputLabel">支払方法を選択してください</p>
-                                <select id="hh_inputMethod" class="hh_inputItem hh_dropdown hh_typo_inputItem">
-                                    <option value="">選択する</option>
-                                    <option value="PayPay">PayPay</option>
-                                    <option value="PASMO">PASMO</option>
-                                    <option value="三井住友デビット">三井住友デビット</option>
-                                    <option value="三井住友クレジット">三井住友クレジット</option>
-                                    <option value="三菱UFJデビット">三菱UFJデビット</option>
-                                    <option value="三菱UFJクレジット">三菱UFJクレジット</option>
-                                    <option value="現金">現金</option>
-                                    <option value="その他">その他</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="hh_typo_inputLabel">備考を入力してください</p>
-                                <textarea placeholder="入力する" id="hh_inputNote"
-                                    class="hh_inputItem hh_textarea hh_typo_inputItem"></textarea>
-                            </li>
-                        </ul>
-                        <div class="hh_confirmBtnWrapper">
-                            <button id="hh_confirmBtn" class="hh_confirmBtn hh_typo_confirmBtn">確定する</button>
-                        </div>
+                <div class="hh_inputForm">
+                    <p class="hh_typo_inputExp">支払内容を入力してください</p>
+                    <ul class="hh_inputList">
+                        <li>
+                            <p class="hh_typo_inputLabel">日付を選択してください</p>
+                            <input placeholder="入力する" autocomplete="off" id="hh_inputDay"
+                                class="hh_inputItem hh_typo_inputItem">
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">金額を入力してください</p>
+                            <input type="number" placeholder="入力する" autocomplete="off" id="hh_inputAmount"
+                                class="hh_inputItem hh_typo_inputItem">
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">内容を入力してください</p>
+                            <input type="text" placeholder="入力する" autocomplete="on" id="hh_inputContent"
+                                class="hh_inputItem hh_typo_inputItem">
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">分類を選択してください</p>
+                            <select autocomplete="off" id="hh_inputCategory"
+                                class="hh_inputItem hh_dropdown hh_typo_inputItem">
+                                <option value="" selected>選択する</option>
+                                <option value="食費">食費</option>
+                                <option value="生活雑貨費">生活雑貨費</option>
+                                <option value="服飾費">服飾費</option>
+                                <option value="チャージ">チャージ</option>
+                                <option value="交際費">交際費</option>
+                                <option value="娯楽費">娯楽費</option>
+                                <option value="交通費">交通費</option>
+                                <option value="公共料金">公共料金</option>
+                                <option value="引落し">引落し</option>
+                                <option value="給与">給与</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">支払方法を選択してください</p>
+                            <select autocomplete="off" id="hh_inputMethod"
+                                class="hh_inputItem hh_dropdown hh_typo_inputItem">
+                                <option value="">選択する</option>
+                                <option value="PayPay">PayPay</option>
+                                <option value="PASMO">PASMO</option>
+                                <option value="三井住友デビット">三井住友デビット</option>
+                                <option value="三井住友クレジット">三井住友クレジット</option>
+                                <option value="三菱UFJデビット">三菱UFJデビット</option>
+                                <option value="三菱UFJクレジット">三菱UFJクレジット</option>
+                                <option value="現金">現金</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">備考を入力してください</p>
+                            <textarea placeholder="入力する" autocomplete="on" id="hh_inputNote"
+                                class="hh_inputItem hh_textarea hh_typo_inputItem"></textarea>
+                        </li>
+                    </ul>
+                    <div class="hh_confirmBtnWrapper">
+                        <button id="hh_confirmBtn" class="hh_confirmBtn hh_typo_confirmBtn">確定する</button>
                     </div>
                 </div>
             </section>

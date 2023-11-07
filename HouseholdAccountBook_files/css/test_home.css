@@ -3,8 +3,6 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
     background-image: url('../image/sunset_beach02.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -49,19 +47,19 @@ main {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #2E2E2E;
 }
 
 /* 入力フォーム */
-.hh_inputFormWrapper {
-    padding-top: 24px;
-}
-
 .hh_inputForm {
     padding: 16px;
     border: 1px solid #D9D9D9;
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hh_inputList {
+    padding-top: 16px;
 }
 
 .hh_inputList>li:not(:first-child) {
@@ -78,10 +76,15 @@ main {
 .hh_inputItem {
     width: 100%;
     margin-top: 8px;
-    padding: 15px;
-    border: 1px solid #D9D9D9;
+    padding: 16px;
     border-radius: 16px;
     background-color: #FEFBDB;
+    outline: none;
+}
+
+.hh_inputItem:focus {
+    padding: 15px;
+    border: 1px solid #ffb700;
 }
 
 .hh_dropdown>option {
