@@ -328,7 +328,7 @@ window.addEventListener('DOMContentLoaded', function () {
         const noteInputElm = document.getElementById('hh_inputNote');
 
         // 支払日を取得
-        paymentDay = dayInputElm.value;
+        paymentDay = dayInputElm.value.replaceAll('-', '/');
         // 支払金額を取得
         paymentAmount = amountInputElm.value;
         // 支払内容を取得

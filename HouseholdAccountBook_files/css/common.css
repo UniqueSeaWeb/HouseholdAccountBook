@@ -56,7 +56,7 @@
     height: 6px;
     border-radius: 8px;
     background-color: #FFA500;
-    animation: audio-wave 2.2s infinite ease-in-out;
+    animation: audio-wave 1.4s infinite ease-in-out;
 }
 
 .com_loader_bars>div:not(:first-child) {
