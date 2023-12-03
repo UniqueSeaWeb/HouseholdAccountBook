@@ -34,3 +34,24 @@ function hideLoader() {
         loader.classList.add('com_loader_hidden');
     }
 }
+
+/* コンポーネント：Navigation */
+if (document.getElementsByClassName('com_nav')) {
+    // ナビゲーションが存在する場合
+    // ナビゲーションの要素を取得
+    const nav = document.getElementsByClassName('com_nav');
+    // ナビゲーション押下時の処理
+    for (let i = 0; i < nav.length; i++) {
+        nav[i].addEventListener('click', function () {
+            if (this.classList.contains('com_nav_open')) {
+                // 既に開いている場合
+                // ナビゲーションを閉じる
+                this.classList.remove('com_nav_open');
+            } else {
+                // 閉じている場合
+                // ナビゲーションを開く
+                this.classList.add('com_nav_open');
+            }
+        });
+    }
+}
