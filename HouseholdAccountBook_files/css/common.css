@@ -39,7 +39,7 @@
     width: 100vw;
     height: 100vh;
     height: 100dvh;
-    background-color: #2E2E2E;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
 }
 
