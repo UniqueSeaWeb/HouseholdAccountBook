@@ -3,11 +3,22 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url('../image/sunset_beach02.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Noto Sans JP', sans-serif;
+}
+
+.hh_backgroundImg_morning {
+    background-image: url('../image/sunshine_beach01.jpg');
+}
+
+.hh_backgroundImg_evening {
+    background-image: url('../image/sunset_beach02.jpg');
+}
+
+.hh_backgroundImg_night {
+    background-image: url('../image/moonnight_beach01.jpg');
 }
 
 .hh_scrollBody {
@@ -22,12 +33,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 80px;
+    padding: 18px 80px;
 }
 
 .hh_headerImg {
     position: absolute;
-    top: 4px;
+    top: 12px;
     left: 16px;
 }
 

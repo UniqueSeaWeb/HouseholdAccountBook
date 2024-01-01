@@ -5,6 +5,27 @@ createLoader();
 // 画面読込完了時、ローダーを非表示
 window.addEventListener('load', hideLoader);
 
+// 時間帯で背景画像を変える関数
+function setBackgroundImg(now) {
+    // ボディ要素を取得
+    const body = document.body;
+
+    // 現在時刻から何時かを取得
+    const hour = now.getHours();
+
+    if (6 <= hour && hour < 15) {
+        // 朝の場合
+        // ボディの背景画像を朝のビーチに設定
+        body.classList.add('hh_backgroundImg_morning');
+    } else if (15 <= hour && hour < 18) {
+        // ボディの背景画像を夕方のビーチに設定
+        body.classList.add('hh_backgroundImg_evening');
+    } else {
+        // ボディの背景画像を夜のビーチに設定
+        body.classList.add('hh_backgroundImg_night');
+    }
+}
+
 // 日付をYYYY-MM-DDの書式で返す関数
 function formatDate(dt) {
     var y = dt.getFullYear();
@@ -14,16 +35,22 @@ function formatDate(dt) {
 }
 
 // 支払日の初期値を設定する関数
-function setInitialDay() {
+function setInitialDay(now) {
     // 支払日の入力欄要素を取得
     const dayInputElm = document.getElementById('hh_inputDay');
     // 初期値を今日に設定
-    dayInputElm.value = formatDate(new Date());
+    dayInputElm.value = formatDate(now);
 }
 
 window.addEventListener('DOMContentLoaded', function () {
+    // 現在時刻を取得
+    const now = new Date();
+
+    // 背景画像を設定
+    setBackgroundImg(now);
+
     // 支払日の初期値を設定
-    setInitialDay();
+    setInitialDay(now);
 
     // 支配日の入力欄の要素を取得
     const dayInputElm = document.getElementById('hh_inputDay');
