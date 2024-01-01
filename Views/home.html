@@ -1,0 +1,107 @@
+<!DOCTYPE>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>家計簿アプリ | テスト</title>
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="../HouseholdAccountBook_files/css/reset.css?20231203">
+    <link rel="stylesheet" href="../HouseholdAccountBook_files/css/components.css?20231203">
+    <link rel="stylesheet" href="../HouseholdAccountBook_files/css/common.css?20231203">
+    <!-- 画面個別CSS -->
+    <link rel="stylesheet" href="../HouseholdAccountBook_files/css/home.css?20231203">
+</head>
+
+<body>
+    <!-- 背景置いてスクロール -->
+    <div class="hh_scrollBody">
+        <!-- ヘッダー -->
+        <header id="hh_header">
+            <img src="../HouseholdAccountBook_files/image/logo_sp.svg?20231203" class="hh_headerImg">
+            <h1 class="c_typo_headerXL c_typo_WHT hh_typo_header">Unique Sea</h1>
+        </header>
+
+        <!-- メイン -->
+        <main>
+            <section class="hh_inputSec">
+                <div class="hh_inputForm">
+                    <h2 class="c_typo_headerM c_typo_BLK01 c_typo_center">家計簿アプリ</h2>
+                    <p class="hh_typo_inputExp">支払内容を入力してください</p>
+                    <ul class="hh_inputList">
+                        <li>
+                            <p class="hh_typo_inputLabel">日付を選択してください</p>
+                            <input type="date" value="" placeholder="入力する" autocomplete="off" id="hh_inputDay"
+                                class="hh_inputItem hh_typo_inputItem">
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">金額を入力してください</p>
+                            <input type="number" placeholder="入力する" autocomplete="off" id="hh_inputAmount"
+                                class="hh_inputItem hh_typo_inputItem">
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">内容を入力してください</p>
+                            <input type="text" placeholder="入力する" autocomplete="on" id="hh_inputContent"
+                                class="hh_inputItem hh_typo_inputItem">
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">分類を選択してください</p>
+                            <select autocomplete="off" id="hh_inputCategory"
+                                class="hh_inputItem hh_dropdown hh_typo_inputItem">
+                                <option value="" selected>選択する</option>
+                                <option value="食費">食費</option>
+                                <option value="生活雑貨費">生活雑貨費</option>
+                                <option value="服飾費">服飾費</option>
+                                <option value="チャージ">チャージ</option>
+                                <option value="交際費">交際費</option>
+                                <option value="娯楽費">娯楽費</option>
+                                <option value="交通費">交通費</option>
+                                <option value="公共料金">公共料金</option>
+                                <option value="引落し">引落し</option>
+                                <option value="給与">給与</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">支払方法を選択してください</p>
+                            <select autocomplete="off" id="hh_inputMethod"
+                                class="hh_inputItem hh_dropdown hh_typo_inputItem">
+                                <option value="">選択する</option>
+                                <option value="PayPay">PayPay</option>
+                                <option value="PASMO">PASMO</option>
+                                <option value="三井住友デビット">三井住友デビット</option>
+                                <option value="三井住友クレジット">三井住友クレジット</option>
+                                <option value="三菱UFJデビット">三菱UFJデビット</option>
+                                <option value="三菱UFJクレジット">三菱UFJクレジット</option>
+                                <option value="現金">現金</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </li>
+                        <li>
+                            <p class="hh_typo_inputLabel">備考を入力してください</p>
+                            <textarea placeholder="入力する" autocomplete="on" id="hh_inputNote"
+                                class="hh_inputItem hh_textarea hh_typo_inputItem"></textarea>
+                        </li>
+                    </ul>
+                    <div class="hh_confirmBtnWrapper">
+                        <button id="hh_confirmBtn" class="hh_confirmBtn hh_typo_confirmBtn">確定する</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer>
+            <p class="c_typo_headerXXS c_typo_WHT c_typo_center">&copy; 2023 UniqueSea.</p>
+        </footer>
+    </div>
+
+    <!-- 共通JavaScript -->
+    <script src="../HouseholdAccountBook_files/css/events.js?20231203"></script>
+    <script src="../HouseholdAccountBook_files/css/common.js?20231203"></script>
+    <!-- 個別JavaScript -->
+    <script src="../HouseholdAccountBook_files/css/home.js?20231203"></script>
+</body>
+
+</html>
